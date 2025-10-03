@@ -1,0 +1,8 @@
+train_data: "data/train/"
+val_data: "data/val/"
+num_classes: 10
+batch_size: 8
+epochs: 50
+lr: 0.0001
+img_size: 640
+
