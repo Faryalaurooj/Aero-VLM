@@ -6,7 +6,7 @@
 
 ---
 
-## 📌 Abstract
+## Abstract
 Fine-grained aircraft recognition in high-resolution remote sensing imagery is critical for defense, surveillance, and monitoring, yet remains highly challenging due to **intra-class similarity, small object size, occlusion, camouflage, and cluttered backgrounds**.  
 
 We present **Aero-VLM**, a hybrid deep learning framework that integrates:
@@ -20,7 +20,7 @@ Alongside the model, we introduce **Aero-RSI**, a curated high-resolution benchm
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 aero-vlm/
 │── data/ # Datasets (Aero-RSI, FGSC-23, etc.)
 │── models/
@@ -42,9 +42,9 @@ aero-vlm/
 
 
 
----
 
-##  Installation
+
+#  Installation
 ```bash
 git clone https://github.com/yourusername/aero-vlm.git
 cd aero-vlm
@@ -74,7 +74,7 @@ Also supports:
 
 FGSC-23
 
-##  Training
+# Training
 
 python train.py \
   --data data/Aero-RSI/annotations/train.json \
@@ -89,7 +89,7 @@ python train.py \
   
 python train.py --resume runs/train/aero-vlm/last_checkpoint.pth
 
-## Evaluation
+# Evaluation
 
 python evaluate.py \
   --weights runs/train/aero-vlm/best_model.pth \
@@ -106,7 +106,7 @@ F1-score
 
 PR curves
 
-## Inference
+# Inference
 
 python inference.py \
   --weights runs/train/aero-vlm/best_model.pth \
@@ -114,7 +114,7 @@ python inference.py \
   --output results/
 
 
-## Edge Deployment
+# Edge Deployment
 
 # Export ONNX
 python export.py --weights best_model.pth --format onnx
@@ -122,7 +122,7 @@ python export.py --weights best_model.pth --format onnx
 # Export TorchScript
 python export.py --weights best_model.pth --format torchscript
 
-## Results
+# Results
 | Model               | mAP@0.5  | AP_small | F1       | Latency (ms) |
 | ------------------- | -------- | -------- | -------- | ------------ |
 | CLIP                | 58.2     | 42.1     | 60.4     | 120          |
